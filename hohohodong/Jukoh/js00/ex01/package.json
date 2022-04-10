@@ -1,0 +1,23 @@
+{
+  "name": "hellosomeone",
+  "version": "1.0.0",
+  "description": "solve js00-ex01",
+  "main": "helloSomeone.js",
+  "type":"module",
+  "scripts": {
+    "test": "ex01"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihnhyuk/jsstudy.git"
+  },
+  "keywords": [
+    "js00-ex01"
+  ],
+  "author": "jukoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mihnhyuk/jsstudy/issues"
+  },
+  "homepage": "https://github.com/mihnhyuk/jsstudy#readme"
+}
