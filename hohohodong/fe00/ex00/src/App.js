@@ -8,7 +8,6 @@ class App extends Component {
     }
     return (
       <div>
-        
         <section style = {style}>
         <h1>ToDoList</h1>
         </section>
