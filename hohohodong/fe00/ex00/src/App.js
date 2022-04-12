@@ -13,7 +13,6 @@ class App extends Component {
         <h1>ToDoList</h1>
         </section>
         
-
         
         <section>
           <p>입력할 부분</p>
