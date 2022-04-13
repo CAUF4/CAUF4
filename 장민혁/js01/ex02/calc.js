@@ -6,8 +6,6 @@ let cost_price = document.getElementById("price_input").value
 let mem_check = document.getElementById("is_membership")
 let mem_lv = document.getElementById("membership_lv")
 
-
-
 let pn = document.createElement("li")
 let cp = document.createElement("li")
 let dp = document.createElement("li")
@@ -21,12 +19,23 @@ let set_time = () => {
 
 let draw_rec = () =>{    
     product_name = document.getElementById("product_name_input").value;
-    cost_price = document.getElementById("price_input").value;
-    console.log(typeof(cost_price))
+    cost_price = parseInt(document.getElementById("price_input").value);
+    let discount_price
+    
+    if (mem_lv.value === 'Lv1'){
+        
+        discount_price = Math.round((cost_price) * 0.95)
+    }else if (mem_lv.value === 'Lv2'){
+        discount_price = Math.round((cost_price) * 0.9)
+    }else if (mem_lv.value === 'Lv3'){
+        discount_price = Math.round((cost_price) * 0.85)
+    }else{
+        discount_price = (cost_price);
+    }
 
     pn.innerHTML = "상품명: " + product_name
-    cp.innerHTML = "원가: " + cost_price.toLocaleString("ko_KR", {style : 'currency', currency: 'KRW'})
-    dp.innerHTML = "할인가: "
+    cp.innerHTML = "원가: " + cost_price.toLocaleString()
+    dp.innerHTML = "할인가: " + discount_price.toLocaleString()
 }
 
 let is_checked = () =>{
@@ -35,9 +44,8 @@ let is_checked = () =>{
     }else{
         mem_lv.disabled = true;
     }
-
-    
 }
+
 window.onload = () => {
     set_time()
     draw_rec()   
